@@ -33,7 +33,7 @@ head(dat)
 
 Other than vehicle IDs and lane number, all variables are needed as inputs to the MIDM. Lead vehicle and following vehicle variables use the prefixes `LV` and `ED` respectively. 
 
-MIDM requires the complete trajectory of the lead vehicle and only the first values of the following vehicle variables. But the function `simulate_full_IDM_intermittent_new.R` asks for a dataframe with both `LV` and `ED` variables to later compare the observed trajectories with the MIDM trajectories.  
+MIDM requires the complete trajectory of the lead vehicle and only the first values of the following vehicle variables. But the function `simulate_full_IDM_intermittent_new` asks for a dataframe with both `LV` and `ED` variables to later compare the observed trajectories with the MIDM trajectories.  
 
 In this example, we use the following arguments for the model parameters:  
 ```{r}
@@ -114,3 +114,17 @@ ggplot(data = results |> dplyr::filter(Time > 0.2), aes(x = Time)) +
   theme_minimal() 
 ```
 
+### Terms of use
+
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+You are free to use and modify the code in this repository in your own work only. Reproduction, display, distribution and transmission of the codes to third parties is forbidden. Please abide by these terms:   
+
+* Use the code for academic purposes only.  
+* Cite the [Transportation Research Part-B paper](https://www.sciencedirect.com/science/article/abs/pii/S0191261524000936) when you publish any derivative work based on this code/study.
